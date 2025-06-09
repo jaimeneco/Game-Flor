@@ -1,0 +1,62 @@
+.flower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #bfdae4, #00BFFF);
+}
+
+.flower {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.flower-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: gold;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.tallo {
+    position: absolute;
+    top: 50%;
+    /* desde el centro vertical de la flor */
+    left: 50%;
+    /* centro horizontal */
+    transform: translateX(-50%);
+    width: 20px;
+    /* ancho del tallo */
+    height: 500px;
+    /* largo del tallo */
+    background-color: #228B22;
+    /* verde tallo */
+    border-radius: 5px;
+    z-index: 0;
+    /* detrás de los pétalos si es necesario */
+}
+
+.reset-button {
+    z-index: 10;
+    margin-top: 100px;
+    padding: 30px 30px;
+    font-size: 16px;
+    background-color: #228B22;
+    color: white;
+    border: none;
+    border-radius: 80px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #103f10;
+}
