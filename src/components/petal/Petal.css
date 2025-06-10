@@ -1,0 +1,50 @@
+.Petal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 100% 100% 60% 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform-origin: center 70px; /* punto de giro */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    z-index: 1;
+    transform: translate(-50%, -50%) rotate(0deg) translate(0, -120px);
+}
+.Petal:hover{
+    background-color: #bbb;
+}
+
+.Petal.off {
+    background-color: #bbb;
+}
+
+.Petal.on {
+    background-color: #fff;
+}
+
+.Petal-label {
+    transform: rotate(calc(-1 * var(--angle, 0deg)));
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(-50%, -50%) rotate(var(--angle, 0deg)) translate(0, -120px);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(calc(var(--angle, 0deg) + 30deg)) translate(30px, 50px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(calc(var(--angle, 0deg) + 90deg)) translate(60px, 300px);
+        opacity: 0;
+    }
+}
+
+.falling {
+    animation: fall 1s forwards;
+}
