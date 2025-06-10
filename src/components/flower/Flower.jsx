@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Petal from "../Petal/Petal";
+import Petal from "../petal/Petal";
 import "../flower/Flower.css";
 
 const questions = [
